@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<th:block th:fragment="row-customer">
+    <textarea style="display: none" id="tbCustomers">
+          <tr id="tr_{0}">
+                  <th>{0}</th>
+                  <td>{1}</td>
+                  <td>{2}</td>
+                  <td>{3}</td>
+                  <td>{4}</td>
+                  <td>{5}</td>
+                  <td>{6}</td>
+                  <td>{7}</td>
+                  <td>{8}</td>
+                  <td>
+                  <button data-id="{0}" class="btnEdit btn btn-outline-secondary">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </button>
+                  </td>
+                  <td>
+                    <button data-id="{0}" class="btnDeposit btn btn-outline-success">
+                    <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </td>
+                  <td>
+                    <button data-id="{0}" class="btnWithdraw btn btn-outline-warning">
+                    <i class="fa-solid fa-minus"></i>
+                    </button>
+                  </td>
+                  <td>
+                    <button data-id="{0}" class="btnTransfer btn btn-outline-info">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    </button>
+                  </button>
+                    </td>
+                  <td>
+                    <button data-id="{0}" class="btnDeactivate btn btn-outline-danger">
+                    <i class="fa-solid fa-ban"></i>
+                    </button>
+                  </td>
+                </tr>
+    </textarea>
+</th:block>
+

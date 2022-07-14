@@ -1,0 +1,49 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<th:block th:fragment="modal_withdraw">
+    <div id="mdWithdraw" class="modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Withdraw</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="modal-alert-danger hide">
+                    </div>
+
+                    <form class="mb-3" id="frmWithdraw">
+                        <div class="row mb-3">
+                            <div class="col-xl-6">
+                                <label for="customerIdWit">Id</label>
+                                <input type="text" id="customerIdWit" name="customerIdWit" class="form-control"
+                                       readonly>
+                            </div>
+                            <div class="col-xl-6">
+                                <label for="fullNameWit">Full Name</label>
+                                <input type="text" id="fullNameWit" name="fullNameWit" class="form-control" readonly>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-xl-6">
+                                <label for="balanceWit">Current balance ($)</label>
+                                <input type="tel" id="balanceWit" name="balanceWit" class="form-control" readonly>
+                            </div>
+                            <div class="col-xl-6">
+                                <label for="transactionWit">Withdraw Amount ($)</label>
+                                <input type="text" id="transactionWit" name="transactionWit"
+                                       class="form-control">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="btnWithdraw" class="btn btn-warning">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
